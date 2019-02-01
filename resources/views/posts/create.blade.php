@@ -7,8 +7,6 @@
                    name="title" class="form-control"/>
         </div>
         <div class="form-group">
-            <input required="required" value="{{ old('preface') }}" placeholder="Введите преамбулу статьи" type="text"
-                   name="preface" class="form-control"/>
         </div>
 
         <div class=form-group">
