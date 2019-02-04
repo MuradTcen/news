@@ -6,7 +6,6 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">{{ __('Login') }}</div>
-                    <a href="redirect/github">Login in with Github</a>
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
@@ -62,6 +61,10 @@
                                 <div class="col-md-8 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Login') }}
+                                    </button>
+
+                                    <button  class="btn btn-primary">
+                                        Login With GitHub
                                     </button>
 
                                     @if (Route::has('password.request'))
