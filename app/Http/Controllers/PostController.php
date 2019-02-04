@@ -21,7 +21,8 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = Posts::orderBy('created_at', 'desc')->paginate(5);
+//        $posts = Posts::orderBy('created_at', 'desc')->paginate(5);
+        $posts = Posts::all()->orderBy('created_at', 'desc');
         return view('home')->withPosts($posts);
     }
 
