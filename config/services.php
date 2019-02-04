@@ -43,7 +43,7 @@ return [
     'github' => [
         'client_id' => '83f3c6afd1852e607f50',         // Your GitHub Client ID
         'client_secret' => 'd1ad7b2cbca26441a975ae247f8e809f735243a8', // Your GitHub Client Secret
-        'redirect' => 'http://vernews.herokuapp.com/login/github/callback',
+        'redirect' => 'http://vernews.herokuapp.com/',
     ],
 
 ];
