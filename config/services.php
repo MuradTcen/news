@@ -1,8 +1,8 @@
 <?php
 
-$github_client_id = parse_url(getenv("GITHUB_CLIENT_ID"));
-$github_client_secret = parse_url(getenv("GITHUB_CLIENT_SECRET"));
-$github_redirect = parse_url(getenv("GITHUB_CALLBACK"));
+$github_client_id = getenv("GITHUB_CLIENT_ID");
+$github_client_secret = getenv("GITHUB_CLIENT_SECRET");
+$github_redirect = getenv("GITHUB_CALLBACK");
 
 
 
