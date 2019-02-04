@@ -61,7 +61,7 @@ class LoginController extends Controller
 
         Auth::login($user, true);
 
-        return redirectTo($this->redirectTo);
+        return redirect($this->redirectTo);
         // $user->token;
     }
 }
