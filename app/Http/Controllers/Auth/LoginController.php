@@ -51,11 +51,13 @@ class LoginController extends Controller
 
 //        dd($githubUser);
         $user = User::where('provider_id', $githubUser->getId())->first();
+
         if(!$user){
             $user = User::create([
                 'email' => $githubUser->getEmail(),
                 'name' => $githubUser->getName(),
                 'provider_id' => $githubUser->getId(),
+                'role' => 'author',
             ]);
         }
 
