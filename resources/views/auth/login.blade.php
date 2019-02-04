@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">{{ __('Login') }}</div>
-                    <p><a href="{!! route('socialite.auth', 'github') !!}">Github</a></p>
+                    <a href="redirect/github">Login in with Github</a>
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
