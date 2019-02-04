@@ -128,8 +128,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="360">
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding>
                 <element signature="e#40#54#0#PHP" expanded="true" />
               </folding>
@@ -527,7 +527,7 @@
       <workItem from="1548954551959" duration="21910000" />
       <workItem from="1549039614363" duration="2237000" />
       <workItem from="1549045861729" duration="6000000" />
-      <workItem from="1549226408581" duration="9376000" />
+      <workItem from="1549226408581" duration="9671000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/MuradTcen/news&#10;readmi&#10;# Пожалуйста, введите сообщение коммита, для объяснения, зачем нужно&#10;# это слияние, особенно, если это слияние обновленной вышестоящей&#10;# ветки в тематическую ветку.&#10;#&#10;# Строки, начинающиеся с «#» будут проигнорированы, а пустое&#10;# сообщение отменяет процесс коммита.">
       <created>1548988742521</created>
@@ -540,10 +540,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73805000" />
+    <option name="totallyTimeSpent" value="74100000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="1" width="1922" height="1079" extended-state="6" />
+    <frame x="-1" y="1" width="1922" height="1079" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17182498" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -777,8 +777,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="360">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
