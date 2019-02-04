@@ -5,8 +5,12 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+use Socialite;
+
 class LoginController extends Controller
 {
+
+
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -17,9 +21,7 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
-
     use AuthenticatesUsers;
-    use Socialite;
 
     public function redirectToProvider()
     {
