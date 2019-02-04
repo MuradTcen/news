@@ -49,7 +49,7 @@ class LoginController extends Controller
     {
         $githubUser = Socialite::driver('github')->user();
 
-        dd($githubUser);
+//        dd($githubUser);
 
         $user = User::create([
             'email' => $githubUser->getEmail(),
