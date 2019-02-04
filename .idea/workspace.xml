@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="289cada9-a504-4445-8262-8fbe478fdaf9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-    </list>
+    <list default="true" id="289cada9-a504-4445-8262-8fbe478fdaf9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,8 +173,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="73" column="74" selection-start-line="73" selection-start-column="74" selection-end-line="73" selection-end-column="74" />
+            <state relative-caret-position="461">
+              <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
               <folding>
                 <element signature="e#45#81#0#PHP" expanded="true" />
               </folding>
@@ -534,7 +532,7 @@
       <workItem from="1548954551959" duration="21910000" />
       <workItem from="1549039614363" duration="2237000" />
       <workItem from="1549045861729" duration="6000000" />
-      <workItem from="1549226408581" duration="17959000" />
+      <workItem from="1549226408581" duration="18208000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/MuradTcen/news&#10;readmi&#10;# Пожалуйста, введите сообщение коммита, для объяснения, зачем нужно&#10;# это слияние, особенно, если это слияние обновленной вышестоящей&#10;# ветки в тематическую ветку.&#10;#&#10;# Строки, начинающиеся с «#» будут проигнорированы, а пустое&#10;# сообщение отменяет процесс коммита.">
       <created>1548988742521</created>
@@ -547,11 +545,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82388000" />
+    <option name="totallyTimeSpent" value="82637000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="1" width="1922" height="1079" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17182498" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -796,8 +793,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="73" column="74" selection-start-line="73" selection-start-column="74" selection-end-line="73" selection-end-column="74" />
+        <state relative-caret-position="461">
+          <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
           <folding>
             <element signature="e#45#81#0#PHP" expanded="true" />
           </folding>
