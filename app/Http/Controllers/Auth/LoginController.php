@@ -64,7 +64,8 @@ class LoginController extends Controller
 
         Auth::login($user, true);
 
-        return redirect($this->redirectTo);
+        print_r($githubUser);
+//        return redirect($this->redirectTo);
         // $user->token;
     }
 }
