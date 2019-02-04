@@ -1,5 +1,11 @@
 <?php
 
+$github_client_id = parse_url(getenv("GITHUB_CLIENT_ID"));
+$github_client_secret = parse_url(getenv("GITHUB_CLIENT_SECRET"));
+$github_redirect = parse_url(getenv("GITHUB_CALLBACK"));
+
+
+
 return [
 
     /*
@@ -41,9 +47,9 @@ return [
     ],
 
     'github' => [
-        'client_id' => env('GITHUB_CLIENT_ID'),         // Your GitHub Client ID
-        'client_secret' => env('GITHUB_CLIENT_SECRET'), // Your GitHub Client Secret
-        'redirect' => env('GITHUB_CALLBACK'),
+        'client_id' => $github_client_id,
+        'client_secret' => $github_client_secret,
+        'redirect' => $github_redirect,
     ],
 
 ];
