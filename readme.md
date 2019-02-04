@@ -23,6 +23,7 @@
 
 ## Update (не тестовые дополнения функционала)
 <p align="center">
+
 Решена проблема деплоя Laravel + Postgresql на heroku http://vernews.herokuapp.com/ .
 
 Основные шаги:
