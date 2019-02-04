@@ -39,18 +39,6 @@ Route::get('post/{id}','PostController@get_post')->where('id', '[0-9]+');
 
 
 
-Route::get(
-    '/socialite/{provider}',
-    [
-        ‘as’ => ‘socialite.auth’,
-        function ( $provider ) {
-            return \Socialite::driver( $provider )->redirect();
-        }
-    ]
-);
-
-Route::get('/socialite/{provider}/callback', function ($provider) {
-    $user = \Socialite::driver($provider)->user();
-    dd($user);
-});
+Route::get('login/github', 'Auth\LoginController@redirectToProvider');
+Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallback');
 

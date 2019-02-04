@@ -20,6 +20,18 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+    public function redirectToProvider()
+    {
+        return Socialite::driver('github')->redirect();
+    }
+
+    public function handleProviderCallback()
+    {
+        $user = Socialite::driver('github')->user();
+
+        // $user->token;
+    }
+
     /**
      * Where to redirect users after login.
      *
