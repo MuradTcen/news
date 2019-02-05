@@ -63,8 +63,7 @@ class PostController extends Controller
         $post = Posts::find($id);
         if ($post && ($request->user()->is_owner($post) || $request->user()->is_admin())) {
             $post->delete();
-        }
-        else {
+        } else {
             return redirect('/')->withMessage('Нет прав');
         }
         return redirect('/');
@@ -81,7 +80,7 @@ class PostController extends Controller
             $post->save();
             return redirect('/');
         } else {
-            return redirect('/');
+            return redirect('/')->withMessage('Нет прав');
         }
     }
 
@@ -89,9 +88,12 @@ class PostController extends Controller
     public function edit(Request $request, $post_id)
     {
         $post = Posts::find($post_id);
-        if ($post && ($request->user()->is_owner($post) || $request->user()->is_admin()))
+        if ($post && ($request->user()->is_owner($post) || $request->user()->is_admin())) {
             return view('posts.edit')->with('post', $post);
-        return redirect('/');
+            return redirect('/');
+        } else {
+            return redirect('/')->withMessage('Нет прав');
+        }
     }
 
 
