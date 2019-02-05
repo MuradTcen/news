@@ -60,9 +60,7 @@ class PostController extends Controller
 
     public function destroy(Request $request, $id)
     {
-        //
         $post = Posts::find($id);
-//        if ($post && ($post->author_id == $request->user()->id || $request->user()->is_admin())) {
         if ($post && ($request->user()->is_owner($post->id) || $request->user()->is_admin())) {
             $post->delete();
         }
@@ -71,10 +69,8 @@ class PostController extends Controller
 
     public function update(Request $request)
     {
-        //
         $post_id = $request->input('post_id');
         $post = Posts::find($post_id);
-//        if ($post && ($post->author_id == $request->user()->id || $request->user()->is_admin())) {
         if ($post && ($request->user()->is_owner($post_id) || $request->user()->is_admin())) {
             $title = $request->input('title');
             $post->title = $title;
@@ -90,7 +86,6 @@ class PostController extends Controller
     public function edit(Request $request, $post_id)
     {
         $post = Posts::find($post_id);
-//        if ($post && ($request->user()->id == $post->author_id || $request->user()->is_admin()))
         if ($post && ($request->user()->is_owner($post_id) || $request->user()->is_admin()))
             return view('posts.edit')->with('post', $post);
         return redirect('/');
