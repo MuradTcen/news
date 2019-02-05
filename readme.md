@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.com/MuradTcen/news.svg?branch=master)](https://travis-ci.com/MuradTcen/news)
 ## Тестовое задание 
 <p align="center">
 Написать laravel-приложение (только back-end), которое работает с новостями.
