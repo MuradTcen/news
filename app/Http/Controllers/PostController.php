@@ -61,15 +61,12 @@ class PostController extends Controller
     public function destroy(Request $request, $id)
     {
         $post = Posts::find($id);
-//            if ($post && ($request->user()->id == $post->user_id || $request->user()->is_admin())) {
         if ($post && ($request->user()->is_owner($post) || $request->user()->is_admin())) {
-//        if ($post && ($post->author_id == $request->user()->id || $request->user()->is_admin())) {
             $post->delete();
         }
         else {
             return redirect('/')->withMessage('Нет прав');
         }
-//        print_r($request->user()->is_owner($post->id));
         return redirect('/');
     }
 
@@ -77,7 +74,7 @@ class PostController extends Controller
     {
         $post_id = $request->input('post_id');
         $post = Posts::find($post_id);
-        if ($post && ($request->user()->is_owner($post_id) || $request->user()->is_admin())) {
+        if ($post && ($request->user()->is_owner($post) || $request->user()->is_admin())) {
             $title = $request->input('title');
             $post->title = $title;
             $post->body = $request->input('body');
@@ -92,7 +89,7 @@ class PostController extends Controller
     public function edit(Request $request, $post_id)
     {
         $post = Posts::find($post_id);
-        if ($post && ($request->user()->is_owner($post_id) || $request->user()->is_admin()))
+        if ($post && ($request->user()->is_owner($post) || $request->user()->is_admin()))
             return view('posts.edit')->with('post', $post);
         return redirect('/');
     }
