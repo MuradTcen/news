@@ -13,11 +13,6 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
 
-//    public function show()
-//    {
-//        $posts = Posts::orderBy('created_at', 'desc')->paginate(5);
-//        return view('home')->withPosts($posts);
-//    }
 
     public function index()
     {
@@ -51,7 +46,6 @@ class PostController extends Controller
         if ($request->has('filename')) {
             $post->attachment_file = $request->filename->getClientOriginalName();
             $request->filename->storeAs('', $post->attachment_file);
-//            $post->attachment_file = $request->filename->store('');
         }
         $post->author_id = $request->user()->id;
         $post->save();
@@ -68,7 +62,8 @@ class PostController extends Controller
     {
         //
         $post = Posts::find($id);
-        if ($post && ($post->author_id == $request->user()->id || $request->user()->is_admin())) {
+//        if ($post && ($post->author_id == $request->user()->id || $request->user()->is_admin())) {
+        if ($post && ($request->user()->is_owner($post->id) || $request->user()->is_admin())) {
             $post->delete();
         }
         return redirect('/');
@@ -79,14 +74,15 @@ class PostController extends Controller
         //
         $post_id = $request->input('post_id');
         $post = Posts::find($post_id);
-        if ($post && ($post->author_id == $request->user()->id || $request->user()->is_admin())) {
+//        if ($post && ($post->author_id == $request->user()->id || $request->user()->is_admin())) {
+        if ($post && ($request->user()->is_owner($post_id) || $request->user()->is_admin())) {
             $title = $request->input('title');
             $post->title = $title;
             $post->body = $request->input('body');
             $post->save();
             return redirect('/');
         } else {
-            return redirect('/')->withErrors('у вас нет достаточных прав');
+            return redirect('/');
         }
     }
 
@@ -94,9 +90,10 @@ class PostController extends Controller
     public function edit(Request $request, $post_id)
     {
         $post = Posts::find($post_id);
-        if ($post && ($request->user()->id == $post->author_id || $request->user()->is_admin()))
+//        if ($post && ($request->user()->id == $post->author_id || $request->user()->is_admin()))
+        if ($post && ($request->user()->is_owner($post_id) || $request->user()->is_admin()))
             return view('posts.edit')->with('post', $post);
-        return redirect('/')->withErrors('у вас нет достаточных прав');
+        return redirect('/');
     }
 
 

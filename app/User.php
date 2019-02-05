@@ -49,7 +49,7 @@ class User extends Authenticatable
 
     public function is_owner($id_post)
     {
-        if ($this->id == $id_post) {
+        if ($this->id == $id_post->author_id) {
             return true;
         }
         return false;

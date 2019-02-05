@@ -13,7 +13,6 @@
 
 Route::get('/', 'PostController@index');
 Route::get('/home', 'PostController@index');
-//Route::get('/home', ['as' => 'home', 'uses' => 'PostController@show']);
 
 
 Auth::routes();

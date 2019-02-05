@@ -14,7 +14,7 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
+        $response = $this->get('http://vernews.herokuapp.com/');
 
         $response->assertStatus(200);
     }
