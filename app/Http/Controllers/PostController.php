@@ -64,6 +64,10 @@ class PostController extends Controller
         if ($post && ($request->user()->is_owner($post->id) || $request->user()->is_admin())) {
             $post->delete();
         }
+        else {
+            return redirect('/')->withMessage('Недостаточно прав');
+        }
+
         return redirect('/');
     }
 
