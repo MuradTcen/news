@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/MuradTcen/news.svg?branch=master)](https://travis-ci.com/MuradTcen/news)
+[![Coverage Status](https://coveralls.io/repos/github/MuradTcen/news/badge.svg?branch=master)](https://coveralls.io/github/MuradTcen/news?branch=master)
 ## Тестовое задание 
 <p align="center">
 Написать laravel-приложение (только back-end), которое работает с новостями.
