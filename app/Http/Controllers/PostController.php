@@ -61,7 +61,8 @@ class PostController extends Controller
     public function destroy(Request $request, $id)
     {
         $post = Posts::find($id);
-        if ($post && ($request->user()->is_owner($post->id) || $request->user()->is_admin())) {
+//        if ($post && ($request->user()->is_owner($post->id) || $request->user()->is_admin())) {
+        if ($post && ($request->user()->id == $post->user_id || $request->user()->is_admin())) {
             $post->delete();
         }
         print_r($request->user()->is_owner($post->id));
