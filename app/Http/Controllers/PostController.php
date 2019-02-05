@@ -65,6 +65,9 @@ class PostController extends Controller
         if ($post && ($request->user()->id == $post->user_id || $request->user()->is_admin())) {
             $post->delete();
         }
+        else {
+            return redirect('/')->withMessage('Нет прав');
+        }
 //        print_r($request->user()->is_owner($post->id));
         return redirect('/');
     }
