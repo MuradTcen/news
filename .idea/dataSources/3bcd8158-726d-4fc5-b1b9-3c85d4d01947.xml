@@ -13,8 +13,8 @@
       <Visible>1</Visible>
       <Relations>sequence|table|16388|16390|1
 sequence|table|16424|16426|1
-sequence|table|16766|16768|1
-sequence|table|16788|16790|1
+sequence|table|17286|17288|1
+sequence|table|17308|17310|1
 </Relations>
     </database>
     <database id="3" parent="1" name="laravel">
@@ -111,8 +111,8 @@ sequence|table|16788|16790|1
       <Comment>standard public schema</Comment>
       <StateNumber>351</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2019-01-31.09:08:23.595</IntrospectionTimestamp>
-      <IntrospectionStateNumber>747</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2019-02-20.06:05:38.755</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1245</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -189,17 +189,17 @@ sequence|table|16788|16790|1
       <DataType>integer</DataType>
     </sequence>
     <sequence id="28" parent="18" name="posts_id_seq">
-      <ObjectId>16788</ObjectId>
+      <ObjectId>17308</ObjectId>
       <Owner>admin_fresh</Owner>
-      <StateNumber>747</StateNumber>
+      <StateNumber>1245</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="29" parent="18" name="users_id_seq">
-      <ObjectId>16766</ObjectId>
+      <ObjectId>17286</ObjectId>
       <Owner>admin_fresh</Owner>
-      <StateNumber>743</StateNumber>
+      <StateNumber>1241</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
@@ -215,19 +215,19 @@ sequence|table|16788|16790|1
       <StateNumber>562</StateNumber>
     </table>
     <table id="32" parent="18" name="password_resets">
-      <ObjectId>16781</ObjectId>
+      <ObjectId>17301</ObjectId>
       <Owner>admin_fresh</Owner>
-      <StateNumber>745</StateNumber>
+      <StateNumber>1243</StateNumber>
     </table>
     <table id="33" parent="18" name="posts">
-      <ObjectId>16790</ObjectId>
+      <ObjectId>17310</ObjectId>
       <Owner>admin_fresh</Owner>
-      <StateNumber>747</StateNumber>
+      <StateNumber>1245</StateNumber>
     </table>
     <table id="34" parent="18" name="users">
-      <ObjectId>16768</ObjectId>
+      <ObjectId>17288</ObjectId>
       <Owner>admin_fresh</Owner>
-      <StateNumber>743</StateNumber>
+      <StateNumber>1241</StateNumber>
     </table>
     <column id="35" parent="30" name="id">
       <Position>1</Position>
@@ -301,32 +301,32 @@ sequence|table|16788|16790|1
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>745</StateNumber>
+      <StateNumber>1243</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="46" parent="32" name="token">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>745</StateNumber>
+      <StateNumber>1243</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="47" parent="32" name="created_at">
       <Position>3</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>745</StateNumber>
+      <StateNumber>1243</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <index id="48" parent="32" name="password_resets_email_index">
-      <ObjectId>16787</ObjectId>
-      <StateNumber>745</StateNumber>
+      <ObjectId>17307</ObjectId>
+      <StateNumber>1243</StateNumber>
       <ColNames>email</ColNames>
     </index>
     <column id="49" parent="33" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>747</StateNumber>
+      <StateNumber>1245</StateNumber>
       <DefaultExpression>nextval(&apos;posts_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
@@ -334,143 +334,157 @@ sequence|table|16788|16790|1
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>747</StateNumber>
+      <StateNumber>1245</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="51" parent="33" name="title">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>747</StateNumber>
+      <StateNumber>1245</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="52" parent="33" name="body">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>747</StateNumber>
+      <StateNumber>1245</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="53" parent="33" name="created_at">
+    <column id="53" parent="33" name="watches">
       <Position>5</Position>
-      <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>747</StateNumber>
-      <TypeId>1114</TypeId>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1245</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
     </column>
-    <column id="54" parent="33" name="updated_at">
+    <column id="54" parent="33" name="attachment_file">
       <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1245</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="55" parent="33" name="created_at">
+      <Position>7</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>747</StateNumber>
+      <StateNumber>1245</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="55" parent="33" name="posts_pkey">
-      <ObjectId>16797</ObjectId>
-      <StateNumber>747</StateNumber>
+    <column id="56" parent="33" name="updated_at">
+      <Position>8</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1245</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="57" parent="33" name="posts_pkey">
+      <ObjectId>17318</ObjectId>
+      <StateNumber>1245</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="56" parent="33" name="posts_title_unique">
-      <ObjectId>16799</ObjectId>
-      <StateNumber>747</StateNumber>
+    <index id="58" parent="33" name="posts_title_unique">
+      <ObjectId>17320</ObjectId>
+      <StateNumber>1245</StateNumber>
       <ColNames>title</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="57" parent="33" name="posts_pkey">
-      <ObjectId>16798</ObjectId>
-      <StateNumber>747</StateNumber>
+    <key id="59" parent="33" name="posts_pkey">
+      <ObjectId>17319</ObjectId>
+      <StateNumber>1245</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>posts_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="58" parent="33" name="posts_title_unique">
-      <ObjectId>16800</ObjectId>
-      <StateNumber>747</StateNumber>
+    <key id="60" parent="33" name="posts_title_unique">
+      <ObjectId>17321</ObjectId>
+      <StateNumber>1245</StateNumber>
       <ColNames>title</ColNames>
       <UnderlyingIndexName>posts_title_unique</UnderlyingIndexName>
     </key>
-    <column id="59" parent="34" name="id">
+    <column id="61" parent="34" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>743</StateNumber>
+      <StateNumber>1241</StateNumber>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="60" parent="34" name="name">
+    <column id="62" parent="34" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>743</StateNumber>
+      <StateNumber>1241</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="61" parent="34" name="email">
+    <column id="63" parent="34" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>743</StateNumber>
+      <StateNumber>1241</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="62" parent="34" name="password">
+    <column id="64" parent="34" name="password">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>743</StateNumber>
+      <StateNumber>1241</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="63" parent="34" name="role">
+    <column id="65" parent="34" name="role">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>743</StateNumber>
+      <StateNumber>1241</StateNumber>
       <DefaultExpression>&apos;author&apos;::character varying</DefaultExpression>
       <TypeId>1043</TypeId>
     </column>
-    <column id="64" parent="34" name="remember_token">
+    <column id="66" parent="34" name="remember_token">
       <Position>6</Position>
       <DataType>varchar(100)|0s</DataType>
-      <StateNumber>743</StateNumber>
+      <StateNumber>1241</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="65" parent="34" name="created_at">
+    <column id="67" parent="34" name="created_at">
       <Position>7</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>743</StateNumber>
+      <StateNumber>1241</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="66" parent="34" name="updated_at">
+    <column id="68" parent="34" name="updated_at">
       <Position>8</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>743</StateNumber>
+      <StateNumber>1241</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="67" parent="34" name="users_pkey">
-      <ObjectId>16777</ObjectId>
-      <StateNumber>743</StateNumber>
+    <index id="69" parent="34" name="users_pkey">
+      <ObjectId>17297</ObjectId>
+      <StateNumber>1241</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="68" parent="34" name="users_email_unique">
-      <ObjectId>16779</ObjectId>
-      <StateNumber>743</StateNumber>
+    <index id="70" parent="34" name="users_email_unique">
+      <ObjectId>17299</ObjectId>
+      <StateNumber>1241</StateNumber>
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="69" parent="34" name="users_pkey">
-      <ObjectId>16778</ObjectId>
-      <StateNumber>743</StateNumber>
+    <key id="71" parent="34" name="users_pkey">
+      <ObjectId>17298</ObjectId>
+      <StateNumber>1241</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="70" parent="34" name="users_email_unique">
-      <ObjectId>16780</ObjectId>
-      <StateNumber>743</StateNumber>
+    <key id="72" parent="34" name="users_email_unique">
+      <ObjectId>17300</ObjectId>
+      <StateNumber>1241</StateNumber>
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>
-    <check id="71" parent="34" name="users_role_check">
-      <ObjectId>16773</ObjectId>
-      <StateNumber>743</StateNumber>
+    <check id="73" parent="34" name="users_role_check">
+      <ObjectId>17293</ObjectId>
+      <StateNumber>1241</StateNumber>
       <ColNames>role</ColNames>
       <Predicate>(role)::text = ANY ((ARRAY[&apos;admin&apos;::character varying, &apos;author&apos;::character varying, &apos;user&apos;::character varying])::text[])</Predicate>
     </check>

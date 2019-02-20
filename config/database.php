@@ -1,12 +1,18 @@
 <?php
 
 
-$url = parse_url(getenv("DATABASE_URL"));
-
-$host = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
+if ($_SERVER['SERVER_NAME'] == "vernews.herokuapp.com") {
+    $url = parse_url(getenv("DATABASE_URL"));
+    $host = $url["host"];
+    $username = $url["user"];
+    $password = $url["pass"];
+    $database = substr($url["path"], 1);
+} else {
+    $host = 'localhost';
+    $username = 'admin_fresh';
+    $password = 'freshpassword';
+    $database = 'fresh';
+}
 
 return [
 
@@ -68,7 +74,7 @@ return [
 
             'driver' => 'pgsql',
             'port' => '5432',
-            'host'     => $host,
+            'host' => $host,
             'database' => $database,
             'username' => $username,
             'password' => $password,

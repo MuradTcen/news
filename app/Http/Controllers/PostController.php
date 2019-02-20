@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Posts;
+use App\Post;
 use App\User;
 use Redirect;
 use Illuminate\Support\Facades\Storage;
@@ -16,15 +16,15 @@ class PostController extends Controller
 
     public function index()
     {
-//        $posts = Posts::orderBy('created_at', 'desc')->paginate(5);
-        $posts = Posts::all();
+//        $posts = Post::orderBy('created_at', 'desc')->paginate(5);
+        $posts = Post::all();
         return view('home')->withPosts($posts);
     }
 
 
     public function get_post($post_id)
     {
-        $post = Posts::find($post_id);
+        $post = Post::find($post_id);
         if (!isset($post)) abort(404);
         $author_id = $post->author_id;
         $user = User::find($author_id);
@@ -40,7 +40,7 @@ class PostController extends Controller
 
     public function store(StorePost $request)
     {
-        $post = new Posts();
+        $post = new Post();
         $post->title = $request->get('title');
         $post->body = $request->get('body');
         if ($request->has('filename')) {
@@ -60,7 +60,7 @@ class PostController extends Controller
 
     public function destroy(Request $request, $id)
     {
-        $post = Posts::find($id);
+        $post = Post::find($id);
         if ($post && ($request->user()->is_owner($post) || $request->user()->is_admin())) {
             $post->delete();
         } else {
@@ -72,7 +72,7 @@ class PostController extends Controller
     public function update(Request $request)
     {
         $post_id = $request->input('post_id');
-        $post = Posts::find($post_id);
+        $post = Post::find($post_id);
         if ($post && ($request->user()->is_owner($post) || $request->user()->is_admin())) {
             $title = $request->input('title');
             $post->title = $title;
@@ -87,7 +87,7 @@ class PostController extends Controller
 
     public function edit(Request $request, $post_id)
     {
-        $post = Posts::find($post_id);
+        $post = Post::find($post_id);
         if ($post && ($request->user()->is_owner($post) || $request->user()->is_admin())) {
             return view('posts.edit')->with('post', $post);
             return redirect('/');
