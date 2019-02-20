@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Post;
 use App\User;
 use Redirect;
-use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\Post\StorePost;
 
 use Illuminate\Http\Request;
@@ -19,13 +18,12 @@ class PostController extends Controller
 //        $posts = Post::orderBy('created_at', 'desc')->paginate(5);
         $posts = Post::all();
         return view('home')->withPosts($posts);
+
     }
 
 
-    public function get_post($post_id)
+    public function show(Post $post)
     {
-        $post = Post::find($post_id);
-        if (!isset($post)) abort(404);
         $author_id = $post->author_id;
         $user = User::find($author_id);
         event('postHasViewed', $post);

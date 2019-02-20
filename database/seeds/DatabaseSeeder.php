@@ -80,5 +80,16 @@ class DatabaseSeeder extends Seeder
             'body' => 'body',
         ]);
 
+        DB::table('posts')->insert([
+            'title' => 'Bernie Sanders announces run for presidency in 2020: \'We\'re gonna win\'',
+            'author_id' => 3,
+            'body' => 'body',
+        ]);
+        DB::table('posts')->insert([
+            'title' => 'Trump v California: administration wants to get billions in rail funding back',
+            'author_id' => 3,
+            'body' => 'body',
+        ]);
+
     }
 }

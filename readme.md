@@ -37,10 +37,13 @@
 Переменные github_client_id, github_client_secret, github_callback хранятся в переменных окружениях.
 <p>
 
-
-## TODO
-
-1. Починить дефолтные тесты
-2. Написать несколько тестов
-3. Попробовать реализовать RESTful api
-4. Попробовать Mocking
+## Update 20/02/19
+1. Отрефакторено Posts->Post
+2. Применен binding роутера - моделей через DI
+3. Добавлен контроллер RestController 
+4. Добавлены Post/PostCollection, Post/PostResource  
+5. Реализованы функционал rest api: показать все посты, показать один пост
+## TO DO:
+1. Binding model router
+2. Middleware
+3. Pipeline
