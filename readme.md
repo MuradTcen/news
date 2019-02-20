@@ -42,7 +42,7 @@
 2. Применен binding роутера - моделей через DI
 3. Добавлен контроллер RestController 
 4. Добавлены Post/PostCollection, Post/PostResource  
-5. Реализованы функционал rest api: показать все посты, показать один пост
+5. Реализован функционал rest api: показать все посты, показать один пост
 ## TO DO:
 1. Binding model router
 2. Middleware
